@@ -4,17 +4,17 @@ module.exports = {
     execute(client, message, args) {
         let target = message.mentions.members.first();
 
-        if (message.member.permissions.has("MANAGE_SERVER")) {
+        if (message.member.permissions.has("BAN_MEMBERS")) {
             if (!target) {
                 return message.channel.send("Whom do you want to ban?");
             } else {
-                if (target.permissions.has("BAN_MEMBERS")) {
+                if (target.permissions.has("MANAGE_GUILD")) {
                     return message.channel.send("The member is a mod or admin, you can not ban that member");
                 } else {
                     const tgt = message.guild.members.cache.get(target.id);
                     tgt.ban()
                         .then(() => {
-                            message.channel.send(`Successfully ban ${target}`);
+                            message.channel.send(`Successfully banned ${target}`);
                         }).catch((err) => {
                             console.log(err);
                             message.channel.send(`I can not ban ${target}`)

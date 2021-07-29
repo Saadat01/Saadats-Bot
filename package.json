@@ -6,14 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Saadat Mahmud",
+  "author": "Saadat",
   "license": "ISC",
   "dependencies": {
     "bufferutil": "^4.0.3",
     "discord-anti-spam": "^2.5.1",
     "discord.js": "^12.5.3",
     "dotenv": "^8.2.0",
-    "mongoose": "^5.12.5",
+    "express": "^4.17.1",
     "ms": "^2.1.3",
     "utf-8-validate": "^5.0.4",
     "zlib-sync": "^0.1.7"

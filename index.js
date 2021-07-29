@@ -1,10 +1,12 @@
+
+
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-const prefix = '.';
+const keepAlive = require("./server")
 
-const mongoose = require('mongoose');
+const prefix = '.';
 
 require('dotenv').config();
 
@@ -15,16 +17,6 @@ client.events = new Discord.Collection();
     require(`./handlers/${handler}`)(client, Discord)
 })
 
-mongoose.connect(process.env.MONGODB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-
-}).then(() => {
-    console.log('Connected to DB');
-}).catch((err) => {
-    console.log(err);
-});
-
+keepAlive()
 
 client.login(process.env.DISCORD_TOKEN);
