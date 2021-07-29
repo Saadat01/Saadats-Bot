@@ -1,3 +1,5 @@
-module.exports = () => {
-    console.log('Bot started');
+module.exports = (client) => {
+
+  console.log('Bot started');
+
 }
