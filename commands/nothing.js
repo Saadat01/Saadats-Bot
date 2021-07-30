@@ -1,6 +1,6 @@
 module.exports = {
-    name: '',
-    description: '',
+    name: 'nothing',
+    description: 'NOTHING',
     execute(client, message, args) {
         
     }
