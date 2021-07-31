@@ -9,7 +9,7 @@ module.exports = {
                 return message.channel.send("Whom do you want to ban?");
             } else {
                 if (target.permissions.has("MANAGE_GUILD")) {
-                    return message.channel.send("The member is a mod or admin, you can not ban that member");
+                    return message.channel.send("The member is a mod or admin or the owner, you can not ban that member");
                 } else {
                     const tgt = message.guild.members.cache.get(target.id);
                     tgt.ban()
@@ -22,7 +22,7 @@ module.exports = {
                 }
             }
         } else {
-            return message.channel.send('Either you dont have permissions or you messed up something');
+            return message.channel.send('Either you dont have permissions or you messed up something <:hahaa:865095062484811776>');
         }
     }
 }

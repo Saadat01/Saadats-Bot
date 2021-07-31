@@ -22,7 +22,7 @@ module.exports = {
                 }
             }
         } else {
-            return message.channel.send('Either you dont have permissions or you messed up something');
+            return message.channel.send('Either you dont have permissions or you messed up something <:hahaa:865095062484811776>');
         }
     }
 }

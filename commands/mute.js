@@ -33,10 +33,10 @@ module.exports = {
                     }, ms(args[1]));
                 }
             } else {
-                message.channel.send("I could not find that mmeber :(")
+                message.channel.send("I could not find that mmeber <:hahaa:865095062484811776>")
             }
         } else {
-            message.channel.send("You do not have the permission to mute a member :(")
+            message.channel.send("You do not have the permission to mute a member <:hahaa:865095062484811776>")
         }
     }
 }

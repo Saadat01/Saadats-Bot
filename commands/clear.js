@@ -15,7 +15,7 @@ module.exports = {
                 message.channel.send(`Succesfully cleared ${args[0]} messages :D`);
             });
         } else {
-            message.channel.send("Ask a admin for manage messages permission then use this command again Ok?");
+            message.channel.send("Ask a admin for manage messages permission then use this command again Ok? <:hahaa:865095062484811776>");
         }
 
     }

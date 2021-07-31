@@ -21,7 +21,7 @@ module.exports = {
                 message.channel.send(`${tgt} is not muted`)
             }
         }else{
-            message.channel.send("You do not have permission to unmute a member :(")
+            message.channel.send("You do not have permission to unmute a member <:hahaa:865095062484811776>")
         }
 
     }

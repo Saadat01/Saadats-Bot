@@ -18,8 +18,17 @@ require('dotenv').config();
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 
+
+client.once("ready", () => {
+    const _date = new Date();
+    console.log(_date);
+    module.exports = _date
+});
+
 ['command_handler', 'event_handler'].forEach(handler => {
     require(`./handlers/${handler}`)(client, Discord)
 })
+
+
 
 client.login(process.env.DISCORD_TOKEN);
