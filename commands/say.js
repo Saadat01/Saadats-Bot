@@ -4,8 +4,8 @@ module.exports = {
     execute(cliet, message, args) {
         if(message.author.id === "304584342238265345"){
 
-          message.delete();
           const msg = message.content.slice(4).trim();
+          message.delete();
           message.channel.send(msg)
 
         }
