@@ -2,7 +2,7 @@ module.exports = {
   name: 'online',
   description: 'It sends the time when the bot was started and for how long was the bot online',
   execute(client, message, args) {
-    
+
     let date = require('../index')
 
     let totalSeconds = (client.uptime / 1000);
@@ -15,8 +15,8 @@ module.exports = {
 
     let uptime = `I have been online for ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
 
-      message.channel.send(uptime)
-      //message.channel.send(date)
+    message.channel.send(uptime)
+    //message.channel.send(date)
 
   }
 }
