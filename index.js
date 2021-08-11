@@ -7,11 +7,20 @@ app.get('/', (req, res) => res.send("Hello world"));
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
+require('dotenv').config();
 
-const Discord = require('discord.js');
+const Discord = require ("discord.js");
+const { Intents } = Discord;
 
-const client = new Discord.Client();
+const intents = new Intents ();
 
+for(const intent of Object.keys (Intents.FLAGS)){
+intents.add(intent);
+}
+
+const client = new Discord.Client ({
+  intents: intents
+});
 const prefix = '.';
 
 require('dotenv').config();
@@ -57,4 +66,4 @@ client.on('messageDelete', async message => {
   }
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.TOKEN);
