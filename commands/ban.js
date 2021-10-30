@@ -6,7 +6,7 @@ module.exports = {
 
     if (message.member.permissions.has("BAN_MEMBERS")) {
       if (!target) {
-        return message.channel.send("Whom do you want to ban?");
+        return message.channel.send("Could not find target. Please mention the target.");
       } else {
         if (target.permissions.has("MANAGE_GUILD")) {
           return message.channel.send("The member is a mod or admin or the owner, you can not ban that member");
@@ -22,7 +22,7 @@ module.exports = {
         }
       }
     } else {
-      return message.channel.send('Either you dont have permissions or you messed up something <:hahaa:865095062484811776>');
+      return message.channel.send('You do not have permission to use this command <:hahaa:865095062484811776>');
     }
   }
 }

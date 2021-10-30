@@ -43,7 +43,7 @@ module.exports = {
         }
           }
       } else {
-        message.channel.send("I could not find that member <:hahaa:865095062484811776>")
+        message.channel.send("Could not find target. Please mention the target. <:hahaa:865095062484811776>")
       }
     } else {
       message.channel.send("You do not have the permission to mute a member <:hahaa:865095062484811776>")

@@ -5,7 +5,7 @@ const port = 3000;
 app.get('/', (req, res) => res.send("Hello world"));
 
 
-app.listen(port, () => console.log(`Pigeon Bot listening at http://localhost:${port}`));
+app.listen(port, () => console.log(`Listening at http://localhost:${port}`));
 
 
 const Discord = require('discord.js');
@@ -24,6 +24,8 @@ client.events = new Discord.Collection();
 })
 
 //deleted message logs starts
+
+
 
 client.on('messageDelete', async message => {
   if (!message.guild) return;

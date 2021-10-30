@@ -3,7 +3,7 @@ module.exports = {
   description: "It clears messages",
   async execute(client, message, args) {
     if (message.member.permissions.has("MANAGE_MESSAGES")) {
-      if (!args[0]) return message.reply("Next time, mention the number of messages you want to clear OK?");
+      if (!args[0]) return message.reply("How many messaeges am I going to clear?");
       if (isNaN(args[0])) return message.reply("Enter a number");
       if (args[0] > 100) return message.reply("You can not clear more than 100 messages");
       if (args[0] < 1) return message.reply("You must clear atleast one message");
@@ -13,9 +13,10 @@ module.exports = {
           console.log(err);
         })
         message.channel.send(`Succesfully cleared ${args[0]} messages :D`);
+        
       });
     } else {
-      message.channel.send("Ask a admin for manage messages permission then use this command again Ok? <:hahaa:865095062484811776>");
+      message.channel.send("You do not have permission to use this command <:hahaa:865095062484811776>");
     }
 
   }

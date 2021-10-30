@@ -1,0 +1,16 @@
+module.exports = {
+  name: 'lock',
+  description: 'It locks a channel',
+  execute(client, message, args) {
+    const channel = message.channel
+    const role = message.guild.roles.cache.find(role => role.name == "Member")
+
+    channel.overwritePermissions([
+      {
+        id: role.id,
+        deny: ['SEND_MESSAGES']
+      },
+    ], 'optional reason')
+    message.channel.send("Successfully locked this channel")
+  }
+}
